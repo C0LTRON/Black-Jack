@@ -1,25 +1,5 @@
 /*Javascript Blackjack conversion from Java
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-------------------------------------------------------
 Required Objects
 
 Shoe -- one array containing 416 shuffled card objects (that's how many cards are in 8 decks)
