@@ -1,3 +1,6 @@
+The readability of this README is significantly better on IDE.
+
+
 This is my attempt to optimize, and rebuild an old Java project in JavaScript.
 
 The completed version of this App will will implement user login authentication, along with account information stored in a database.
@@ -124,7 +127,7 @@ Finish play(Playerhand)
 
         Return hand.bet
         
-And finally after returning hand.bet, we can loop gameplay for as long as the player likes by calling betOrPlay() at the end of the play() function.
+And finally after returning hand.bet, we can loop gameplay for as long as the player likes by calling playOrBet() at the end of the play() function.
 
         playOrBet();
         
