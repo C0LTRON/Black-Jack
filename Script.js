@@ -11,6 +11,11 @@ let bet = 10;
 
 
 
+
+
+
+
+
 //Call this if debugging shuffle state of the shoe
 function debugShoe(shoe){
     for(let i = 0; i < 25; i++){
