@@ -1,22 +1,17 @@
-const suit = ["Diamonds", "Spades", "Hearts", "Clubs"];
-const name = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"];
+
+
+
+const suit  = ["Diamonds", "Spades", "Hearts", "Clubs"];
+const name  = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"];
 const value = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11];
 
 
 
 //This creates the Shoe that the cards will be dealt from.
 let shoe = generateShoe();
+
 //bet will be changed to user input, for temporarry debugging a static value will be okay.
 let bet = 10;
-
-//Call this if debugging shuffle state of the shoe
-function debugShoe(shoe){
-    for(let i = 0; i < 25; i++){
-        let x = JSON.stringify (shoe[i]);
-        console.log(x);
-    }
-console.log("\n");
-}
 
 //This function creates all the cards we will play with
 //For clarity, a "shoe" is the name casino's use for multiple decks of cards shuffled together. 
@@ -42,6 +37,7 @@ function generateShoe() {
     shoe = cut(shoe);
     return shoe;
 }   
+
 //Now that our shoe has been built, it needs to be shuffled.
 //This can be done in O(n) by utilizing the Fisher-Yates algorithm. This algorithm moves every card at least once to a random index within the shoe array. https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 function shuffle(shoe){  
@@ -59,7 +55,7 @@ function shuffle(shoe){
 }
     
 function cut(shoe){
-    //this variable will be user input, accepted range is 1 - 100 as to reflect a percentage of the total shoe. 
+    //this variable will be user input (static for testing) accepted range is 1 - 100 as to reflect a percentage of the total shoe. 
     let input = 75;
     //this calculation determines how many cards will remain in the shoe after cut
     let shoeSize = Math.round(((input/100)*shoe.length));
@@ -73,6 +69,14 @@ function cut(shoe){
       return shoe;
 }
 
+//Call this if debugging shuffle state of the shoe
+function debugShoe(shoe){
+    for(let i = 0; i < 25; i++){
+        let x = JSON.stringify (shoe[i]);
+        console.log(x);
+    }
+console.log("\n");
+}
 
 
 
