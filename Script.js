@@ -9,13 +9,6 @@ let shoe = generateShoe();
 //bet will be changed to user input, for temporarry debugging a static value will be okay.
 let bet = 10;
 
-
-
-
-
-
-
-
 //Call this if debugging shuffle state of the shoe
 function debugShoe(shoe){
     for(let i = 0; i < 25; i++){
@@ -44,6 +37,7 @@ function generateShoe() {
             }
         }
     }
+    //shoe has been created, but It still needs to be shuffled and cut
     shoe = shuffle(shoe);
     shoe = cut(shoe);
     return shoe;
@@ -65,7 +59,7 @@ function shuffle(shoe){
 }
     
 function cut(shoe){
-    //this variable is the user input, accepted range is 1 - 100 as a percentage of the total shoe. 
+    //this variable will be user input, accepted range is 1 - 100 as to reflect a percentage of the total shoe. 
     let input = 75;
     //this calculation determines how many cards will remain in the shoe after cut
     let shoeSize = Math.round(((input/100)*shoe.length));
