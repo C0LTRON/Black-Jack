@@ -12,17 +12,17 @@ Javascript Blackjack conversion from Java
 -------------------------------------------------------
 Required Objects
 
-Shoe[] one array containing 416 shuffled card objects (that's the equivilent of 8 decks of cards) https://en.wikipedia.org/wiki/Shoe_(cards)
+ Shoe[] one array containing 416 shuffled card objects (that's the equivilent of 8 decks of cards) https://en.wikipedia.org/wiki/Shoe_(cards)
  
-Card(name, suit, value)
+ Card(name, suit, value)
 
-Dealerhand(ace counter, cards[])
+ Dealerhand(ace counter, cards[])
 
-Playerhand[] - this object will act as a container for our hand objects that can be passed into the play() function 
+ Playerhand[] - this object will act as a container for our hand objects that can be passed into the play() function 
  
-hand(cards[], aceCounter, bet, betMultiplier) -- Hand objects are nested within Playerhand object due to SPLIT mechanic
+ hand(cards[], aceCounter, bet, betMultiplier) -- Hand objects are nested within Playerhand object due to SPLIT mechanic
 
-  aceCounter: required due to aces having conditional value. If the players hand.value goes over 21 while having an ace, the ace changes value from 11 to 1. 
+ aceCounter: required due to aces having conditional value. If the players hand.value goes over 21 while having an ace, the ace changes value from 11 to 1. 
     
     if(hand.value > 21 && aceCounter > 0){
       hand.value = hand.value - 10
