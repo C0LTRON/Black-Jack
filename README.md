@@ -8,7 +8,7 @@ This App will perform all CRUD functions necessary to implement said features.
 
 
 
-/*Javascript Blackjack conversion from Java
+Javascript Blackjack conversion from Java
 -------------------------------------------------------
 Required Objects
 
@@ -63,7 +63,7 @@ Generate Shoe -- done 4/13/2022
     The game will generate a new Shoe once Shoe.length() < 20
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-Place Bet OR quit game
+betOrQuit()
     -> if bet,  then bet is subtracted from chips
     -> if quit, then chips are stored in DB
         -> say thanks for playing or something else, and then log the user out.
@@ -123,19 +123,11 @@ Finish play(Playerhand)
         hand.bet += (bet*betMultiplier)
 
         Return hand.bet
-
         
+And finally after returning hand.bet, we can loop gameplay for as long as the player likes by calling betOrPlay() at the end of the play() function.
 
-        
-
-
-
-
+        playOrBet();
         
         
         
-
-
-
-
-*/
+        
