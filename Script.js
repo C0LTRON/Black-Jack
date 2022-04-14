@@ -6,6 +6,10 @@ const value = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11];
 
 //This creates the Shoe that the cards will be dealt from.
 let shoe = generateShoe();
+//bet will be changed to user input, for temporarry debugging a static value will be okay.
+let bet = 10;
+
+
 
 //Call this if debugging shuffle state of the shoe
 function debugShoe(shoe){
@@ -30,11 +34,13 @@ function generateShoe() {
             for(let x = 0; x < value.length; x++){
                 // this pushes the new card created into the shoe
                 let card = {Value: value[x], Name: name[x], Suit: suit[i]};
+                //this pushes the new card into the shoe array
                 shoe.push(card);
             }
         }
     }
     shoe = shuffle(shoe);
+    shoe = cut(shoe);
     return shoe;
 }   
 //Now that our shoe has been built, it needs to be shuffled.
@@ -53,7 +59,20 @@ function shuffle(shoe){
     return shoe;
 }
     
-
+function cut(shoe){
+    //this variable is the user input, accepted range is 1 - 100 as a percentage of the total shoe. 
+    let input = 75;
+    //this calculation determines how many cards will remain in the shoe after cut
+    let shoeSize = Math.round(((input/100)*shoe.length));
+    console.log(shoeSize);
+    // this loops the pop() function until the shoe is the correct size
+    do {
+        shoe.pop();
+      } while (shoe.length > shoeSize);
+      
+      console.log(shoe.length);
+      return shoe;
+}
 
 
 

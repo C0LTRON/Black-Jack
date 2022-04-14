@@ -2,40 +2,38 @@
 -------------------------------------------------------
 Required Objects
 
-Shoe -- one array containing 416 shuffled card objects (that's how many cards are in 8 decks)
-
-Card -- (string name, string suit, Int value)
+Shoe[] one array containing 416 shuffled card objects (that's the equivilent of 8 decks of cards) https://en.wikipedia.org/wiki/Shoe_(cards)
+ 
+Card(string name, string suit, Int value)
 
 Dealerhand(int ace counter, array[cards])
 
-Playerhand(array[hands])
+Playerhand(hands[])
  ->hand(array[cards], int ace counter, int bet, int betMultiplier) -- Hand objects are nested within Playerhand object due to SPLIT mechanic
 
-here comes dat yung pseudo code yo
-------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Before Play
+Before Play -- will create after gameplay is functional.
 
     Log in
         -> verify account data
 
-    Show acct balance
+    Show accountt balance
         -> connect with database 
             -> customer makes withdrawl from database 
             -> withdrawl will be reffered to as chips
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Generate Shoe -- done 4/13/2022
 
-Generate Shoe
-
-    forloop that generates 8 decks of cards, and then shuffles all 416 card objects into the shoe object
+    loop that generates 8 decks of cards, and then shuffles all 416 card objects into the shoe object
 
     User can cut shoe
         -> user inputs percentage of shoe they will play with
-            -> if user inputs 70%, shoe will forloop a popfunction until the shoe is 70% of it's original size
+            -> if user inputs 70%, shoe will loop a popfunction until the shoe is 70% of it's original size
 
     The game will generate a new Shoe once Shoe.length() < 20
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------
     
-
 Place Bet OR quit game
     -> if bet,  then bet is subtracted from chips
     -> if quit, then chips are stored in DB
