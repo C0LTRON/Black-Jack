@@ -66,7 +66,7 @@ Generate Shoe -- done 4/13/2022
 betOrQuit()
     -> if bet,  then bet is subtracted from chips
     -> if quit, then chips are stored in DB
-        -> say thanks for playing or something else, and then log the user out.
+        -> say thanks for playing and then log the user out.
 
 play(playerhand[], Shoe)
 

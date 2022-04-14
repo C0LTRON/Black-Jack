@@ -5,7 +5,7 @@ const suit  = ["Diamonds", "Spades", "Hearts", "Clubs"];
 const name  = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"];
 const value = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11];
 
-
+/
 
 //This creates the Shoe that the cards will be dealt from.
 let shoe = generateShoe();
