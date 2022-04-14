@@ -13,7 +13,7 @@ Javascript Blackjack conversion from Java
 Required Objects
 
  Shoe[]
-  one array containing 416 shuffled card objects (that's the equivilent of 8 decks of cards) https://en.wikipedia.org/wiki/Shoe_(cards)
+  //one array containing 416 shuffled card objects (that's the equivilent of 8 decks of cards) https://en.wikipedia.org/wiki/Shoe_(cards)
  
  Card(name, suit, value)
   object which contains all necessary information to determine win/loss state in gameplay
